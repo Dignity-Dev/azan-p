@@ -144,7 +144,7 @@
             </section><!-- //Activities area -->
 
 
-            <!-- Blog Area -->
+            <!-- Article Area -->
             <section class="cr-section blog-area pt--90 pb--100 bg--white flower--right-bottom">
                 <div class="container">
                     <div class="row">
