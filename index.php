@@ -20,83 +20,10 @@
         <!-- Page Conent -->
         <main class="page-content">
 
-            <!-- About Area -->
-            <section class="cr-section about-area ptb--150 bg--white flower--left-top flower--right-bottom">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-lg-6">
-                            <div class="about-content">
-                                <h3><strong><?php echo $web_row['webname']; ?></strong> <?php echo $web_row['web_slug']; ?></h3>
-                                <h2><?php echo $web_row['side_head']; ?></h2>
-                                <?php echo $web_row['side_text']; ?>
-                                <div class="about-content__bottom d-flex align-items-center flex-wrap flex-sm-nowrap">
-                                    <div class="about-content__bottom__left">
-                                        <p>Fell free to connect with us</p>
-                                        <h3 class="body--font"><a href="tel:<?php echo $web_row['web_phone_1']; ?>"><?php echo $web_row['web_phone_1']; ?></a></h3>
-                                    </div>
-                                    <span>or</span>
-                                    <div class="about-content__bottom__right">
-                                        <a href="about-us.php" class="cr-btn cr-btn--sm cr-btn--transparent cr-btn--dark"><span>Read
-                                                More</span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="about-images clearfix">
-                                <img class="wow fadeInUp" src="images/about/large-1.jpg" alt="about image">
-                                <img class="wow fadeInUp" src="images/about/small-1.jpg" alt="smalal image">
-                                <img class="wow fadeInUp" data-wow-delay="0.1s" src="images/about/small-2.jpg" alt="smalal image">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section><!-- //About Area -->
-
-            <!-- Pillar Of Islam -->
-            <section class="cr-section islams-pillar-area ptb--120 bg--pattern zig-zag--top zig-zag--bottom">
-                <div class="islams-pillars d-flex justify-content-between justify-content-lg-center align-items-center flex-wrap flex-xl-nowrap flex-xx-nowrap flex-sp-nowrap">
-                    <div class="islams-pillars__thumb text-lg-center wow fadeInLeft">
-                        <img src="images/pillars/pillars-thumb.png" alt="pillars thumb">
-                    </div>
-                    <div class="islams-pillars__content">
-                        <h2>Take the proper knowledge about 5 pillers of Islam</h2>
-                        <p><span>Piller of islam</span> is the know how to rsue pleasure rationally encounter equ</p>
-                    </div>
-                    <div class="pillars d-flex justify-content-lg-between flex-md-wrap justify-content-md-center justify-content-sm-center justify-content-center">
-                        <div class="pillar__single wow fadeInRight" data-wow-delay="0s">
-                            <div class="pillar__single__inner">
-                                <img class="pillar__single__icon" src="images/pillars/pillar-icon-1.png" alt="pillar 1">
-                                <h3>Kalima</h3>
-                            </div>
-                        </div>
-                        <div class="pillar__single wow fadeInRight" data-wow-delay="0.1s">
-                            <div class="pillar__single__inner">
-                                <img class="pillar__single__icon" src="images/pillars/pillar-icon-2.png" alt="pillar 2">
-                                <h3>Salat</h3>
-                            </div>
-                        </div>
-                        <div class="pillar__single wow fadeInRight" data-wow-delay="0.2s">
-                            <div class="pillar__single__inner">
-                                <img class="pillar__single__icon" src="images/pillars/pillar-icon-3.png" alt="pillar 3">
-                                <h3>Zakat</h3>
-                            </div>
-                        </div>
-                        <div class="pillar__single wow fadeInRight" data-wow-delay="0.3s">
-                            <div class="pillar__single__inner">
-                                <img class="pillar__single__icon" src="images/pillars/pillar-icon-4.png" alt="pillar 4">
-                                <h3>Siam</h3>
-                            </div>
-                        </div>
-                        <div class="pillar__single wow fadeInRight" data-wow-delay="0.4s">
-                            <div class="pillar__single__inner">
-                                <img class="pillar__single__icon" src="images/pillars/pillar-icon-5.png" alt="pillar 5">
-                                <h3>HAJJ</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section><!-- //Pillar Of Islam -->
+            <?php
+                include("file/about.php");
+                include ("file/pillar.php");
+            ?>
 
             <!-- Activities area -->
             <section class="cr-section activities-area half--bg bg-image--1 pt--90 pb--100">

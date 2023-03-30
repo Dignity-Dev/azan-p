@@ -1,6 +1,6 @@
 <?php include("include/header.php"); ?>
 
-<title> Homepage – <?php echo $web_row['webname']; ?> <?php echo $web_row['web_slug']; ?></title>
+<title> About Us – <?php echo $web_row['webname']; ?> <?php echo $web_row['web_slug']; ?></title>
 <meta name="description" content="">
 <meta name="keywords" content="">
 </head>
@@ -12,9 +12,6 @@
         include("other-head.php");
         ?>
 
-
-
-
         <!-- Breadcrumb area -->
         <section class="cr-section breadcrumb-area" data-black-overlay="7">
             <div class="container">
@@ -24,7 +21,7 @@
                             <h2 class="cr-breadcrumb__title">About us</h2>
                             <div class="cr-breadcrumb__tree text-left text-md-left text-center">
                                 <ul>
-                                    <li><a href="index-2.html">Home</a></li>
+                                    <li><a href="index.php">Home</a></li>
                                     <li>Events</li>
                                 </ul>
                             </div>
@@ -36,44 +33,10 @@
 
         <!-- Page Conent -->
         <main class="page-content">
+            <?php
+            include("file/about.php");
+            ?>
 
-            <!-- About Area -->
-            <section class="cr-section about-area ptb--150 bg--white flower--left-top flower--right-bottom">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-lg-6">
-                            <div class="about-content">
-                                <h3><strong>“Azan”</strong> Islamic Template</h3>
-                                <h2>Know the real history of Islam</h2>
-                                <p><span class="mark">Islam</span> is the know how to pursue pleasure rationally
-                                    encounter consequences that are extremely painful. Nor again is there anyone who
-                                    loves or pursues or desires to obtain pain of itself, because it is pain, but
-                                    because</p>
-                                <p>know how to pursue pleasure rationally encounter consequences that are xtremely
-                                    painful. Nor again is there anyone who loves or pursues or desires</p>
-                                <div class="about-content__bottom d-flex align-items-center flex-wrap flex-sm-nowrap">
-                                    <div class="about-content__bottom__left">
-                                        <p>Have you any quary?</p>
-                                        <h3 class="body--font"><a href="callto://+00812356369">+00812 356 369</a></h3>
-                                    </div>
-                                    <span>or</span>
-                                    <div class="about-content__bottom__right">
-                                        <a href="about-us.html" class="cr-btn cr-btn--sm cr-btn--transparent cr-btn--dark"><span>Read
-                                                More</span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="about-images clearfix">
-                                <img class="wow fadeInUp" src="images/about/large-1.jpg" alt="about image">
-                                <img class="wow fadeInUp" src="images/about/small-1.jpg" alt="smalal image">
-                                <img class="wow fadeInUp" data-wow-delay="0.1s" src="images/about/small-2.jpg" alt="smalal image">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section><!-- //About Area -->
 
             <!-- About Details Area -->
             <div class="cr-section about-details-area ptb--120 bg--pattern">
