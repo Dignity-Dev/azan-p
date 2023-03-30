@@ -9,7 +9,7 @@
     <!-- Main wrapper -->
     <div class="wrapper" id="wrapper">
         <?php
-        include("head.php");
+        include("other-head.php");
         ?>
 
 
