@@ -25,6 +25,14 @@
 
     <!-- Cusom css -->
     <link rel="stylesheet" href="css/custom.css">
+    <style>
+        .bg-image--1 {
+            background-image: url(<?php echo 'images/bg/'.$web_row['hero_banner']; ?>);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+    </style>
 
     <!-- Modernizer js -->
-    <script src="../js/vendor/modernizr-3.11.2.min.js"></script>
+    <script src="js/vendor/modernizr-3.11.2.min.js"></script>

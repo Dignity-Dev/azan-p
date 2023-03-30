@@ -93,13 +93,13 @@
 
 
 <!-- JS Files -->
-<script src="../js/vendor/jquery-3.6.0.min.js"></script>
-<script src="../js/vendor/jquery-migrate-3.3.2.min.js"></script>
-<script src="../js/bootstrap.bundle.min.js"></script>
-<script src="../js/plugins.js"></script>
-<script src="../js/PrayTimes.js"></script>
-<script src="../js/active.js"></script>
-<script src="../js/scripts.js"></script>
+<script src="js/vendor/jquery-3.6.0.min.js"></script>
+<script src="js/vendor/jquery-migrate-3.3.2.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/PrayTimes.js"></script>
+<script src="js/active.js"></script>
+<script src="js/scripts.js"></script>
 </body>
 
 </html>
