@@ -21,8 +21,8 @@
         <main class="page-content">
 
             <?php
-                include("file/about.php");
-                include ("file/pillar.php");
+            include("file/about.php");
+            include("file/pillar.php");
             ?>
 
             <!-- Activities area -->
@@ -79,94 +79,42 @@
                             <div class="section-title text-center">
                                 <h4>From Article</h4>
                                 <h2>Latest Article Post</h2>
-                                <p>Islam is the know how to pursue pleasure rationally encounter consequences that are
-                                    extremely painful again is there anyone who loves or pursues or desires to obtain
-                                    pain of itself</p>
+
                             </div>
                         </div>
                     </div>
                     <div class="row">
+                        <?php
+                        $b = mysqli_query($con, "SELECT * FROM `article` WHERE article_status='1'");
+                        if (mysqli_num_rows($b) < 1) {
 
-                        <!-- Start Single Blog -->
-                        <div class="col-lg-6 col-md-6 col-xl-3">
-                            <article class="blog wow fadeInUp">
-                                <div class="blog__thumb">
-                                    <a href="blog-details.html">
-                                        <img src="images/blog/1.jpg" alt="single blog thumb">
-                                    </a>
-                                </div>
-                                <div class="blog__content">
-                                    <div class="blog__content__meta">
-                                        <p>December 20, 2022 - <a href="blogs.html">Afser</a></p>
-                                    </div>
-                                    <h4 class="blog-title"><a href="blog-details.html">Islam is the only one way for
-                                            peace </a></h4>
-                                    <p>Islam is the know how to pursuesure nally encounter consequences extremely </p>
-                                    <a href="blog-details.html" class="cr-readmore">Read</a>
-                                </div>
-                            </article>
-                        </div><!-- //Start Single Blog -->
+                        ?>
+                            <div class="alert alert-info">No article available</div>
+                            <?php } else {
+                            $c = mysqli_query($con, "SELECT * FROM `article` WHERE article_status='1' LIMIT 4");
+                            while ($b_row = mysqli_fetch_array($c)) {
+                            ?>
+                                <!-- Start Single Blog -->
+                                <div class="col-lg-6 col-md-6 col-xl-3">
+                                    <article class="blog wow fadeInUp">
+                                        <div class="blog__thumb">
+                                            <a href="article-details.php?article=<?php echo $b_row['article_slug'] ?>">
+                                                <img src="images/blog/1.jpg" alt="single blog thumb">
+                                            </a>
+                                        </div>
+                                        <div class="blog__content">
+                                            <div class="blog__content__meta">
+                                                <p>Posted on - <?php echo date("l d F, Y", strtotime($b_row['article_date']))  ?></p>
+                                            </div>
+                                            <h4 class="blog-title"><a href="article-details.php?article=<?php echo $b_row['article_slug'] ?>"> <?php echo $b_row['article_title'] ?> </a></h4>
+                                            <?php echo $b_row['article_content'] ?>
+                                            <a href="article-details.php?article=<?php echo $b_row['article_slug'] ?>" class="cr-readmore">Read</a>
+                                        </div>
+                                    </article>
+                                </div><!-- //Start Single Blog -->
 
-                        <!-- Start Single Blog -->
-                        <div class="col-lg-6 col-md-6 col-xl-3">
-                            <article class="blog wow fadeInUp">
-                                <div class="blog__thumb">
-                                    <a href="blog-details.html">
-                                        <img src="images/blog/2.jpg" alt="single blog thumb">
-                                    </a>
-                                </div>
-                                <div class="blog__content">
-                                    <div class="blog__content__meta">
-                                        <p>December 18, 2022 - <a href="blogs.html">Julfiqar</a></p>
-                                    </div>
-                                    <h4 class="blog-title"><a href="blog-details.html">Salat can help us to move closer
-                                            to Allah </a></h4>
-                                    <p>Islam is the know how to pursuesure nally encounter consequences extremely </p>
-                                    <a href="blog-details.html" class="cr-readmore">Read</a>
-                                </div>
-                            </article>
-                        </div><!-- //Start Single Blog -->
-
-                        <!-- Start Single Blog -->
-                        <div class="col-lg-6 col-md-6 col-xl-3">
-                            <article class="blog wow fadeInUp">
-                                <div class="blog__thumb">
-                                    <a href="blog-details.html">
-                                        <img src="images/blog/3.jpg" alt="single blog thumb">
-                                    </a>
-                                </div>
-                                <div class="blog__content">
-                                    <div class="blog__content__meta">
-                                        <p>December 15, 2022 - <a href="blogs.html">Iftekhar</a></p>
-                                    </div>
-                                    <h4 class="blog-title"><a href="blog-details.html">Ramadan teach us how to realize
-                                            fasting</a></h4>
-                                    <p>Islam is the know how to pursuesure nally encounter consequences extremely </p>
-                                    <a href="blog-details.html" class="cr-readmore">Read</a>
-                                </div>
-                            </article>
-                        </div><!-- //Start Single Blog -->
-
-                        <!-- Start Single Blog -->
-                        <div class="col-lg-6 col-md-6 col-xl-3">
-                            <article class="blog wow fadeInUp">
-                                <div class="blog__thumb">
-                                    <a href="blog-details.html">
-                                        <img src="images/blog/4.jpg" alt="single blog thumb">
-                                    </a>
-                                </div>
-                                <div class="blog__content">
-                                    <div class="blog__content__meta">
-                                        <p>December 12, 2022 - <a href="blogs.html">Momen</a></p>
-                                    </div>
-                                    <h4 class="blog-title"><a href="blog-details.html">Learn about Islam, It is very
-                                            simple & realistic</a></h4>
-                                    <p>Islam is the know how to pursuesure nally encounter consequences extremely </p>
-                                    <a href="blog-details.html" class="cr-readmore">Read</a>
-                                </div>
-                            </article>
-                        </div><!-- //Start Single Blog -->
-
+                        <?php }
+                        } ?>
                     </div>
                 </div>
             </section><!-- //Blog Area -->

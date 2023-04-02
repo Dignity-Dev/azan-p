@@ -22,7 +22,7 @@
                             <div class="cr-breadcrumb__tree text-left text-md-left text-center">
                                 <ul>
                                     <li><a href="index.php">Home</a></li>
-                                    <li>Events</li>
+                                    <li>About Us</li>
                                 </ul>
                             </div>
                         </div>
@@ -45,12 +45,8 @@
                         <div class="row">
                             <div class="col-lg-5 col-md-8 offset-0 offset-md-2 offset-lg-0">
                                 <!-- About Details Thumb -->
-                                <div class="about-details__thumb video--trigger">
-                                    <a class="video--trigger" href="https://www.youtube.com/watch?v=XwVGF2mhLIg">
-                                        <img src="images/about/about-details-thumb.jpg" alt="about details thumb">
-                                    </a>
-                                </div><!-- //About Details Thumb -->
-                            </div>
+                                <img src="<?php echo 'images/about/' . $web_row['about_picture']; ?>" alt="about details thumb">
+                            </div><!-- //About Details Thumb -->
                             <div class="col-lg-7">
                                 <!-- About Details Content -->
                                 <div class="about-details__content">
@@ -58,25 +54,17 @@
                                         <div class="col-lg-6 col-md-6">
                                             <div class="single-block">
                                                 <h4 class="single-block__title">Our Mission</h4>
-                                                <p>Islam is the know how to pursuesure rationally encounter consequences
-                                                    extremely painful again we love islam for peace porro quisquam est,
-                                                    qui dolorem ipsum quia dolor sit </p>
+                                                <?php echo $web_row['mission']; ?>
                                             </div>
                                             <div class="single-block">
                                                 <h4 class="single-block__title">Our Vision</h4>
-                                                <p>Islam is the know how to pursuesure rationally encounter consequences
-                                                    extremely painful again we love islam for peace porro quisquam est,
-                                                    qui dolorem ipsum quia dolor sit </p>
+                                                <?php echo $web_row['vision']; ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-6 col-md-6">
                                             <div class="single-block">
                                                 <h4 class="single-block__title">Our History</h4>
-                                                <p>Islam is the know how to pursuesure rationally encounter consequences
-                                                    extremely painful again we love islam for peace porro quisquam est,
-                                                    qui dolorem ipsum quia dolor sit </p>
-                                                <p>Islam is the know how to pursuesure rationally encounter consequences
-                                                    extremely painful to pursuesure rationally encounter</p>
+                                                <?php echo $web_row['history']; ?>
                                             </div>
                                         </div>
                                     </div>
@@ -95,240 +83,42 @@
                             <div class="section-title text-center">
                                 <h4>Our “Activities”</h4>
                                 <h2>Here is our Activities</h2>
-                                <p><span>Islam</span> is the know how to pursue pleasure rationally encounter
-                                    consequences that are extremely painful again is there anyone who loves or pursues
-                                    or desires to obtain pain of itself</p>
+                               
                             </div>
                         </div>
                     </div>
                     <div class="activity-slider-active slider-arrow--style2">
+                        <?php
+                            $a = mysqli_query($con, "SELECT * FROM `activities` WHERE a_status='1'");
+                            if (mysqli_num_rows($a) < 1) {
 
+                            ?>
+                                <div class="alert alert-info">No Activities yet</div>
+                                <?php } else {
+                                $b = mysqli_query($con, "SELECT * FROM `activities` WHERE a_status='1' ");
+                                while ($a_row = mysqli_fetch_array($b)) {
+                                ?>
                         <!-- Single Activity -->
                         <div class="activity-wrap">
                             <figure class="activity">
                                 <div class="activity__thumb">
-                                    <a href="single-activity.html">
-                                        <img src="images/activity/1.jpg" alt="activity image">
+                                    <a href="this-activity.php?activity=<?php echo $a_row['a_slug'] ?>">
+                                        <img src="<?php echo 'images/activity/' . $a_row['a_thumbnail'] ?>" alt="<?php echo $web_row['webname'] ?> - <?php echo $a_row['a_title'] ?> image">
                                     </a>
                                 </div>
                                 <figcaption class="activity__content text-center">
-                                    <h3><a href="single-activity.html">Quran Learning</a></h3>
-                                    <p>Islam is the know how to pursuesure rationally encounter consequences extremely
-                                        painful again we love islam for peace </p>
+                                    <h3><a href="this-activity.php?activity=<?php echo $a_row['a_slug'] ?>"><?php echo $a_row['a_title'] ?></a></h3>
+                                    <?php echo $a_row['a_description'] ?>
+
                                 </figcaption>
                             </figure>
                         </div><!-- //Single Activity -->
-
-                        <!-- Single Activity -->
-                        <div class="activity-wrap">
-                            <figure class="activity">
-                                <div class="activity__thumb">
-                                    <a href="single-activity.html">
-                                        <img src="images/activity/2.jpg" alt="activity image">
-                                    </a>
-                                </div>
-                                <figcaption class="activity__content text-center">
-                                    <h3><a href="single-activity.html">Funeral Service</a></h3>
-                                    <p>Islam is the know how to pursuesure rationally encounter consequences extremely
-                                        painful again we love islam for peace </p>
-                                </figcaption>
-                            </figure>
-                        </div><!-- //Single Activity -->
-
-                        <!-- Single Activity -->
-                        <div class="activity-wrap">
-                            <figure class="activity">
-                                <div class="activity__thumb">
-                                    <a href="single-activity.html">
-                                        <img src="images/activity/3.jpg" alt="activity image">
-                                    </a>
-                                </div>
-                                <figcaption class="activity__content text-center">
-                                    <h3><a href="single-activity.html">Mosque Development</a></h3>
-                                    <p>Islam is the know how to pursuesure rationally encounter consequences extremely
-                                        painful again we love islam for peace </p>
-                                </figcaption>
-                            </figure>
-                        </div><!-- //Single Activity -->
-
-                        <!-- Single Activity -->
-                        <div class="activity-wrap">
-                            <figure class="activity">
-                                <div class="activity__thumb">
-                                    <a href="single-activity.html">
-                                        <img src="images/activity/1.jpg" alt="activity image">
-                                    </a>
-                                </div>
-                                <figcaption class="activity__content text-center">
-                                    <h3><a href="single-activity.html">Quran Learning</a></h3>
-                                    <p>Islam is the know how to pursuesure rationally encounter consequences extremely
-                                        painful again we love islam for peace </p>
-                                </figcaption>
-                            </figure>
-                        </div><!-- //Single Activity -->
-
-                        <!-- Single Activity -->
-                        <div class="activity-wrap">
-                            <figure class="activity">
-                                <div class="activity__thumb">
-                                    <a href="single-activity.html">
-                                        <img src="images/activity/2.jpg" alt="activity image">
-                                    </a>
-                                </div>
-                                <figcaption class="activity__content text-center">
-                                    <h3><a href="single-activity.html">Funeral Service</a></h3>
-                                    <p>Islam is the know how to pursuesure rationally encounter consequences extremely
-                                        painful again we love islam for peace </p>
-                                </figcaption>
-                            </figure>
-                        </div><!-- //Single Activity -->
-
-                        <!-- Single Activity -->
-                        <div class="activity-wrap">
-                            <figure class="activity">
-                                <div class="activity__thumb">
-                                    <a href="single-activity.html">
-                                        <img src="images/activity/3.jpg" alt="activity image">
-                                    </a>
-                                </div>
-                                <figcaption class="activity__content text-center">
-                                    <h3><a href="single-activity.html">Mosque Development</a></h3>
-                                    <p>Islam is the know how to pursuesure rationally encounter consequences extremely
-                                        painful again we love islam for peace </p>
-                                </figcaption>
-                            </figure>
-                        </div><!-- //Single Activity -->
-
+                        <?php }}?>
                     </div>
                 </div>
             </section><!-- //Activities area -->
 
-            <!--  Offer Donation Area -->
-            <div class="offer-donation-area bg--pattern ptb--90">
-                <div class="offer-donation__inner d-flex flex-wrap flex-lg-nowrap">
-                    <div class="offer-donation__offer offer d-flex align-items-center flex-wrap flex-sm-nowrap">
-                        <div class="offer__thumb text-lg-center">
-                            <img class="wow fadeInLeft" src="images/others-png/offer-thumb-small.png" alt="offer thumb">
-                        </div>
-                        <div class="offer__content text-center">
-                            <h2>Special Discount on...</h2>
-                            <h4>Hajj & Umrah package </h4>
-                            <img src="images/others-png/kaba-small.png" alt="kaba">
-                            <div class="offer__content__button">
-                                <a href="contact.html" class="cr-btn cr-btn--transparent cr-btn--sm"><span>Contact
-                                        Us</span></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="offer-donatino__donation">
-                        <div class="donation-wantend text-center">
-                            <h2>Donation wanted for...</h2>
-                            <h5>Mosque development & kid’s school</h5>
-                            <p>Islam is the know how to pursue pleasure rationally encounter consequences that are
-                                extremely painful again is there anyone who loves or pursues or desires to obtain pain
-                                of itself</p>
-                            <div class="donation-wantend__form">
-                                <form action="#">
-                                    <input type="text" placeholder="Your amount here">
-                                    <button class="cr-btn cr-btn--black"><span>DONATE NOW</span></button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div><!-- // Offer Donation Area -->
-
-            <!-- Team Area -->
-            <section class="cr-section team-area ptb--150 bg--white flower--right-bottom">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 col-12 offset-0">
-                            <div class="section-title text-center">
-                                <h4>Our “Team”</h4>
-                                <h2>Meet our Organizer</h2>
-                                <p>Islam is the know how to pursue pleasure rationally encounter consequences that are
-                                    extremely painful again is there anyone who loves or pursues or desires to obtain
-                                    pain of itself</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <!-- Single Team -->
-                        <div class="col-lg-6 col-md-6 col-xl-3">
-                            <figure class="team-member wow fadeInUp">
-                                <div class="team-member__thumb">
-                                    <div class="hexagon">
-                                        <div class="hexagon__inner1">
-                                            <div class="hexagon__inner2">
-                                                <img src="images/team/1.jpg" alt="team member 1">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <figcaption class="team-member__content">
-                                    <h3>Sawad Bin Maksud</h3>
-                                    <h5>President</h5>
-                                </figcaption>
-                            </figure>
-                        </div><!-- //Single Team -->
-                        <!-- Single Team -->
-                        <div class="col-lg-6 col-md-6 col-xl-3">
-                            <figure class="team-member wow fadeInUp">
-                                <div class="team-member__thumb">
-                                    <div class="hexagon">
-                                        <div class="hexagon__inner1">
-                                            <div class="hexagon__inner2">
-                                                <img src="images/team/2.jpg" alt="team member 1">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <figcaption class="team-member__content">
-                                    <h3>Nahiyan Bin Momen</h3>
-                                    <h5>Event Organizer</h5>
-                                </figcaption>
-                            </figure>
-                        </div><!-- //Single Team -->
-                        <!-- Single Team -->
-                        <div class="col-lg-6 col-md-6 col-xl-3">
-                            <figure class="team-member wow fadeInUp">
-                                <div class="team-member__thumb">
-                                    <div class="hexagon">
-                                        <div class="hexagon__inner1">
-                                            <div class="hexagon__inner2">
-                                                <img src="images/team/3.jpg" alt="team member 1">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <figcaption class="team-member__content">
-                                    <h3>Julfiker Amin Ali</h3>
-                                    <h5>Quran Teacher</h5>
-                                </figcaption>
-                            </figure>
-                        </div><!-- //Single Team -->
-                        <!-- Single Team -->
-                        <div class="col-lg-6 col-md-6 col-xl-3">
-                            <figure class="team-member wow fadeInUp">
-                                <div class="team-member__thumb">
-                                    <div class="hexagon">
-                                        <div class="hexagon__inner1">
-                                            <div class="hexagon__inner2">
-                                                <img src="images/team/4.jpg" alt="team member 1">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <figcaption class="team-member__content">
-                                    <h3>Hasib Bin Asfaque</h3>
-                                    <h5>Imam</h5>
-                                </figcaption>
-                            </figure>
-                        </div><!-- //Single Team -->
-                    </div>
-                </div>
-            </section><!-- //Team Area -->
-
+    
         </main><!-- //Page Conent -->
 
 
