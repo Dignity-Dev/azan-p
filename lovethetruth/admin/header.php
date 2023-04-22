@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,10 +9,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Meta -->
-    <meta name="description" content="Responsive Bootstrap 4 Dashboard Template">
-    <meta name="author" content="BootstrapDash">
+    <meta name="description" content="<?php echo $web_row['webname']; ?>">
+    <meta name="author" content="<?php echo $web_row['webname']; ?>">
 
-    <title><?php echo $web_row['webname'];?></title>
+    <title><?php echo $web_row['webname']; ?></title>
 
     <!-- vendor css -->
     <link href="../lib/fontawesome-free/css/all.min.css" rel="stylesheet">
@@ -25,3 +24,5 @@
     <link rel="stylesheet" href="../css/azia.css">
 
 </head>
+
+<body>
