@@ -11,7 +11,7 @@
     <meta name="description" content="Responsive Bootstrap 4 Dashboard Template">
     <meta name="author" content="BootstrapDash">
 
-    <title>Azia Responsive Bootstrap 4 Dashboard Template</title>
+    <title><?php echo $web_row['webname'];?></title>
 
     <!-- vendor css -->
     <link href="../lib/fontawesome-free/css/all.min.css" rel="stylesheet">
@@ -26,7 +26,7 @@
 
     <div class="az-signin-wrapper">
       <div class="az-card-signin">
-        <h1 class="az-logo">az<span>i</span>a</h1>
+        <h1 class="az-logo"><?php echo $web_row['webname'];?></h1>
         <div class="az-signin-header">
           <h2>Welcome back!</h2>
           <h4>Please sign in to continue</h4>
