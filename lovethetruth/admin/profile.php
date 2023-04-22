@@ -8,8 +8,8 @@ include "nav.php";
         <div class="az-content-body">
             <div class="az-dashboard-one-title">
                 <div>
-                    <h2 class="az-dashboard-title">Website Settings!</h2>
-                    <p class="az-dashboard-text">Update All website Information in a single click</p>
+                    <h2 class="az-dashboard-title">My profile!</h2>
+                    <p class="az-dashboard-text">Adjust and update your information</p>
                 </div>
                 <div class="az-content-header-right">
                     <div class="media">
