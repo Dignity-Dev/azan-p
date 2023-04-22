@@ -20,8 +20,8 @@ if (isset($_SESSION['username']) != "" and isset($_SESSION['id']) != "") {
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Meta -->
-    <meta name="description" content="Responsive Bootstrap 4 Dashboard Template">
-    <meta name="author" content="BootstrapDash">
+    <meta name="description" content="<?php echo $web_row['webname']; ?>">
+    <meta name="author" content="<?php echo $web_row['webname']; ?>">
 
     <title><?php echo $web_row['webname']; ?></title>
 
@@ -46,12 +46,12 @@ if (isset($_SESSION['username']) != "" and isset($_SESSION['id']) != "") {
                 <?php
 
                 if (isset($_POST['gethacked'])) {
-                    $email = trim(htmlentities(htmlspecialchars($_POST['username'])));
-                    $pas= trim(htmlentities(htmlspecialchars($_POST['password'])));
-                    $password = md5($password);
-                   
+                    $username = trim(htmlentities(htmlspecialchars($_POST['username'])));
+                    $pas = trim(htmlentities(htmlspecialchars($_POST['password'])));
+                    $password = md5($pas);
 
-                    $check = mysqli_query($conn, "SELECT * FROM user where username='$username' and password = '$password'");
+
+                    $check = mysqli_query($con, "SELECT * FROM user where username='$username' and password = '$password'");
                     $login = mysqli_fetch_array($check);
                     $logins = mysqli_num_rows($check);
                     if ($logins < 1) {
@@ -63,7 +63,10 @@ if (isset($_SESSION['username']) != "" and isset($_SESSION['id']) != "") {
                         $_SESSION["username"] = $login['username'];
                         $_SESSION["id"] = $login['user_id'];
                         // echo $_SESSION['id'];
-                        echo "<script>window.location='dashboard.php';</script>";
+                        $_SESSION['title'] = "Successful";
+                        $_SESSION['message'] = "you are taken to dashboard!";
+                        $_SESSION['icon'] = "success";
+                        $_SESSION['location'] = "dashboard.php";
                     }
                 }
                 ?>
@@ -76,7 +79,7 @@ if (isset($_SESSION['username']) != "" and isset($_SESSION['id']) != "") {
                         <label>Password</label>
                         <input type="password" class="form-control" name="password" placeholder="Enter your password" required>
                     </div><!-- form-group -->
-                    <button class="btn btn-az-primary btn-block">Sign In</button>
+                    <button class="btn btn-az-primary btn-block" name="gethacked">Sign In</button>
                 </form>
             </div><!-- az-signin-header -->
             <div class="az-signin-footer">
@@ -85,7 +88,7 @@ if (isset($_SESSION['username']) != "" and isset($_SESSION['id']) != "") {
             </div><!-- az-signin-footer -->
         </div><!-- az-card-signin -->
     </div><!-- az-signin-wrapper -->
-<?php include "swal.php"?>
+    <?php include "swal.php" ?>
     <script src="../lib/jquery/jquery.min.js"></script>
     <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../lib/ionicons/ionicons.js"></script>
