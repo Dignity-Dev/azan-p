@@ -71,18 +71,21 @@ include "nav.php";
                                                 <td>
                                                     <?php 
                                                     if ($act['m_status'] == '1') {
-                                                        echo "<b>".$act['m_title']."</b>";
+                                                        ?>
+                                                        <span class="badge rounded-pill bg-warning">New</span> <a href="read-message.php?message=<?php echo $act['message_id']; ?>" class="text-success" title="read Me"> <?php echo $act['m_title'];?> </a> 
+                                                        <?php
                                                     }else{
-                                                        echo $act['m_title'];
-                                                    }
+                                                        ?>
+                                                         <a href="read-message.php?message=<?php echo $act['message_id']; ?>" title="read Me"> <?php echo $act['m_title'];?> </a>
+                                                   <?php }
                                                      ?>
                                                 </td>
                                                 <td><?php echo $act['m_name']; ?></td>
                                                 <td><?php echo $act['m_email']; ?></td>
                                                 <td><?php echo date("l, d F Y - H:i:s", strtotime($act['m_date'])) ; ?></td>
                                                 <td>
-                                                    <a href="update-article.php?article=<?php echo $act['article_id']; ?>" class="text-primary" title="Update Me"> <i class="fa fa-edit"> </i> </a> |
-                                                    <a href="delete-article.php?article=<?php echo $act['article_id']; ?>" class="text-danger" title="delete Me"> <i class="fa fa-trash"> </i> </a>
+                                                    
+                                                    <a href="delete-message.php?message=<?php echo $act['message_id']; ?>" class="text-danger" title="delete Me"> <i class="fa fa-trash"> </i> </a>
                                                 </td>
                                             </tr>
                                         <?php } ?>
