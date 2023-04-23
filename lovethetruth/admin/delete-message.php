@@ -6,12 +6,12 @@ if ($send) {
     $_SESSION['title'] = "Delete Successfully";
     $_SESSION['message'] = "An message was deleted successfully";
     $_SESSION['icon'] = "success";
-    $_SESSION['location'] = "message.php";
+    $_SESSION['location'] = "contact.php";
 } else {
     $_SESSION['title'] = "Not deleting Successfully";
     $_SESSION['message'] = "something went wrong, try again later";
     $_SESSION['icon'] = "error";
-    $_SESSION['location'] = "message.php";
+    $_SESSION['location'] = "contact.php";
 }
 
 ?>
