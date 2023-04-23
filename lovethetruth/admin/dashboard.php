@@ -13,7 +13,7 @@ include "nav.php";
                 </div>
                 <div class="az-content-header-right">
 
-                    <a href="article.php" class="btn btn-purple"><i class="fa fa-plus"></i> Question and Answer (Q&A)</a>
+                    <a href="article.php" class="btn btn-purple"><i class="fa fa-plus"></i> Create New Article</a>
                 </div>
             </div><!-- az-dashboard-one-title -->
             <hr>
@@ -23,7 +23,7 @@ include "nav.php";
                     <div class="card">
                         <div class="card-header">
                             <div>
-                                <h6 class="card-title">Create New QA</h6>
+                                <h6 class="card-title">Create New Questions and Answer</h6>
                                 <p class="card-text">Question and Answer design to make all easy and self understanding.</p>
                             </div>
 
@@ -37,8 +37,6 @@ include "nav.php";
                                 $description = $_POST['description'];
                                 $slug = preg_replace('#[ -]+#', '-', trim($title));
 
-                                // Image Upload Code
-                                $fileInfo = PATHINFO($_FILES["act_img"]["name"]);
 
                                 $send = mysqli_query($con, "INSERT INTO `qa`(`qa_title`, `qa_contect`, `qa_slug`) VALUES ('$title','$description','$slug')");
                                 if ($send) {
