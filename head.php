@@ -6,6 +6,7 @@
                 <a href="index-2.html"><img src="<?php echo "images/" . $web_row['web_logo_white']; ?>" alt="<?php echo $web_row['webname']; ?> logo"></a>
             </div>
             <div class="header__right">
+                
                 <div class="header__right__top d-flex justify-content-end align-items-center flex-wrap flex-sm-nowrap">
                     <ul class="header__right__times d-flex justify-content-end">
                         <li>
@@ -14,6 +15,7 @@
                         <li>
                             <p><i class="icofont icofont-full-night"></i>SUNSET : <span class="time-sunset"></span></p>
                         </li>
+
                     </ul>
 
                 </div>
