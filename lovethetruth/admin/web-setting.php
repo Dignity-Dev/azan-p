@@ -114,6 +114,12 @@ include "nav.php";
                                     <h6>Hero Banner</h6>
                                 </div><!-- card-header -->
                                 <div class="card-body">
+                                    <form enctype="multipart/form-data" method="post">
+                                        <label for="Homepage_hero">Change Homepage Banner</label>
+                                        <input type="file" name="hero_banner" class="form-control">
+                                        <br>
+                                        <button type="submit" name="hb" class="btn btn-primary"> Change</button>
+                                    </form>
 
                                 </div><!-- card-body -->
                             </div><!-- card -->
@@ -121,10 +127,15 @@ include "nav.php";
                         <div class="col-sm-4">
                             <div class="card ">
                                 <div class="card-header">
-                                    <h6>Website Icon</h6>
+                                    <h6>Change Website Icon</h6>
                                 </div><!-- card-header -->
                                 <div class="card-body">
-
+                                    <form enctype="multipart/form-data" method="post">
+                                        <label for="web_icon"> Website Icon</label>
+                                        <input type="file" name="web_icon" class="form-control">
+                                        <br>
+                                        <button type="submit" name="wi" class="btn btn-primary"> Change</button>
+                                    </form>
                                 </div><!-- card-body -->
                             </div><!-- card -->
                         </div><!-- col -->
@@ -135,7 +146,12 @@ include "nav.php";
                                     <h6>Website Logo Black</h6>
                                 </div><!-- card-header -->
                                 <div class="card-body">
-
+                                    <form enctype="multipart/form-data" method="post">
+                                        <label for="web_logo_black">Black Website Logo</label>
+                                        <input type="file" name="web_logo_black" class="form-control">
+                                        <br>
+                                        <button type="submit" name="wlb" class="btn btn-primary"> Change</button>
+                                    </form>
                                 </div><!-- card-body -->
                             </div><!-- card -->
                         </div><!-- col -->
@@ -145,7 +161,12 @@ include "nav.php";
                                     <h6>Website Logo Color</h6>
                                 </div><!-- card-header -->
                                 <div class="card-body">
-
+                                    <form enctype="multipart/form-data" method="post">
+                                        <label for="web_logo_color">Color Website Logo</label>
+                                        <input type="file" name="web_logo_color" class="form-control">
+                                        <br>
+                                        <button type="submit" name="cwl" class="btn btn-primary"> Change</button>
+                                    </form>
                                 </div><!-- card-body -->
                             </div><!-- card -->
                         </div><!-- col -->
@@ -153,10 +174,15 @@ include "nav.php";
                         <div class="col-sm-12 mg-t-20">
                             <div class="card ">
                                 <div class="card-header">
-                                    <h6>About Image</h6>
+                                    <h6>Change About Image</h6>
                                 </div><!-- card-header -->
                                 <div class="card-body">
-
+                                    <form enctype="multipart/form-data" method="post">
+                                        <label for="about_picture">About Picture</label>
+                                        <input type="file" name="about_picture" class="form-control">
+                                        <br>
+                                        <button type="submit" name="ap" class="btn btn-primary"> Change</button>
+                                    </form>
                                 </div><!-- card-body -->
                             </div><!-- card -->
                         </div><!-- col -->

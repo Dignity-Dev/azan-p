@@ -15,4 +15,11 @@ if (isset($_POST['about'])) {
     $history = $_POST['history'];
     $footer_content = $_POST['footer_content'];
 }
+
+if (isset($_POST['hb'])) {}
+if (isset($_POST['wi'])) {}
+if (isset($_POST['wlb'])) {}
+if (isset($_POST['cwl'])) {}
+if (isset($_POST['ap'])) {}
+
 ?>
