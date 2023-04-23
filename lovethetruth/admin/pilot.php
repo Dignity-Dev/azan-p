@@ -8,5 +8,11 @@ if (isset($_POST['web'])) {
     $side_text = $_POST['side_text'];
 }
 
-
+// about
+if (isset($_POST['about'])) {
+    $mission = $_POST['mission'];
+    $vision = $_POST['vision'];
+    $history = $_POST['history'];
+    $footer_content = $_POST['footer_content'];
+}
 ?>

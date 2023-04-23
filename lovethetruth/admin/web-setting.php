@@ -98,7 +98,7 @@ include "nav.php";
                                     <label for="history">Our History</label>
                                     <textarea name="history" class="form-control" required><?php echo $web_row['history'] ?></textarea>
                                     <label for="footer_content">Footer Contents</label>
-                                    <textarea name="hero_head" class="form-control" required><?php echo $web_row['footer_content'] ?></textarea>
+                                    <textarea name="footer_content" class="form-control" required><?php echo $web_row['footer_content'] ?></textarea>
                                     <br>
                                     <button type="submit" class="btn btn-primary" name="about"><i class="fa fa-sync"></i> Update Contact Information</button>
                                 </form>
