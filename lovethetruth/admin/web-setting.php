@@ -102,13 +102,14 @@ include "nav.php";
                                     <br>
                                     <button type="submit" class="btn btn-primary" name="about"><i class="fa fa-sync"></i> Update Contact Information</button>
                                 </form>
+                                <br>
                             </div>
                         </div>
                     </div>
                 </div><!-- col -->
                 <div class="col-lg-5 mg-t-20 mg-lg-t-0">
                     <div class="row row-sm">
-                        <div class="col-sm-8">
+                        <div class="col-sm-6">
                             <div class="card ">
                                 <div class="card-header">
                                     <h6>Hero Banner</h6>
@@ -116,7 +117,7 @@ include "nav.php";
                                 <div class="card-body">
                                     <form enctype="multipart/form-data" method="post">
                                         <label for="Homepage_hero">Change Homepage Banner</label>
-                                        <input type="file" name="hero_banner" class="form-control">
+                                        <input type="file" name="hero_banner" class="form-control" required>
                                         <br>
                                         <button type="submit" name="hb" class="btn btn-primary"> Change</button>
                                     </form>
@@ -124,7 +125,7 @@ include "nav.php";
                                 </div><!-- card-body -->
                             </div><!-- card -->
                         </div><!-- col -->
-                        <div class="col-sm-4">
+                        <div class="col-sm-6">
                             <div class="card ">
                                 <div class="card-header">
                                     <h6>Change Website Icon</h6>
@@ -132,7 +133,7 @@ include "nav.php";
                                 <div class="card-body">
                                     <form enctype="multipart/form-data" method="post">
                                         <label for="web_icon"> Website Icon</label>
-                                        <input type="file" name="web_icon" class="form-control">
+                                        <input type="file" name="web_icon" class="form-control" required>
                                         <br>
                                         <button type="submit" name="wi" class="btn btn-primary"> Change</button>
                                     </form>
@@ -148,7 +149,7 @@ include "nav.php";
                                 <div class="card-body">
                                     <form enctype="multipart/form-data" method="post">
                                         <label for="web_logo_black">Black Website Logo</label>
-                                        <input type="file" name="web_logo_white" class="form-control">
+                                        <input type="file" name="web_logo_white" class="form-control" required>
                                         <br>
                                         <button type="submit" name="wlw" class="btn btn-primary"> Change</button>
                                     </form>
@@ -163,7 +164,7 @@ include "nav.php";
                                 <div class="card-body">
                                     <form enctype="multipart/form-data" method="post">
                                         <label for="web_logo_color">Color Website Logo</label>
-                                        <input type="file" name="web_logo_color" class="form-control">
+                                        <input type="file" name="web_logo_color" class="form-control" required>
                                         <br>
                                         <button type="submit" name="wlc" class="btn btn-primary"> Change</button>
                                     </form>
@@ -179,7 +180,7 @@ include "nav.php";
                                 <div class="card-body">
                                     <form enctype="multipart/form-data" method="post">
                                         <label for="about_picture">About Picture</label>
-                                        <input type="file" name="about_picture" class="form-control">
+                                        <input type="file" name="about_picture" class="form-control" required>
                                         <br>
                                         <button type="submit" name="ap" class="btn btn-primary"> Change</button>
                                     </form>
@@ -196,22 +197,44 @@ include "nav.php";
                                 <div class="card-body">
                                     <label for="web_email">Website Email</label>
                                     <input type="text" name="web_email" class="form-control" value="<?php echo $web_row['web_email'] ?>" required>
-                                    <label for="web_phone_1">Phone No.</label>
-                                    <input type="text" name="web_phone_1" class="form-control" value="<?php echo $web_row['web_phone_1'] ?>">
-                                    <label for="web_phone_2">Tel. Number</label>
-                                    <input type="text" name="web_phone_2" class="form-control" value="<?php echo $web_row['web_phone_2'] ?>">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label for="web_phone_1">Phone No.</label>
+                                            <input type="text" name="web_phone_1" class="form-control" value="<?php echo $web_row['web_phone_1'] ?>">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="web_phone_2">Tel. Number</label>
+                                            <input type="text" name="web_phone_2" class="form-control" value="<?php echo $web_row['web_phone_2'] ?>">
+                                        </div>
+                                    </div>
+
+
                                     <label for="office_address">Office Address</label>
                                     <input type="text" name="office_address" class="form-control" value="<?php echo $web_row['office_address'] ?>">
                                     <br>
                                     <p class="border-bottom"><b>Social Media Handles</b></p>
-                                    <label for="facebook">Facebook</label>
-                                    <input type="text" name="facebook" class="form-control" value="<?php echo $web_row['facebook'] ?>">
-                                    <label for="twitter">Twitter</label>
-                                    <input type="text" name="twitter" class="form-control" value="<?php echo $web_row['twitter'] ?>">
-                                    <label for="instagram">Instagram</label>
-                                    <input type="text" name="instagram" class="form-control" value="<?php echo $web_row['instagram'] ?>">
-                                    <label for="whatsapp">WhatsApp</label>
-                                    <input type="text" name="whatsapp" class="form-control" value="<?php echo $web_row['whatsapp'] ?>">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label for="facebook">Facebook</label>
+                                            <input type="text" name="facebook" class="form-control" value="<?php echo $web_row['facebook'] ?>">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="twitter">Twitter</label>
+                                            <input type="text" name="twitter" class="form-control" value="<?php echo $web_row['twitter'] ?>">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label for="instagram">Instagram</label>
+                                            <input type="text" name="instagram" class="form-control" value="<?php echo $web_row['instagram'] ?>">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="whatsapp">WhatsApp</label>
+                                            <input type="text" name="whatsapp" class="form-control" value="<?php echo $web_row['whatsapp'] ?>">
+                                        </div>
+                                    </div>
+
+
                                     <br>
                                     <button type="submit" name="contact" class="btn btn-primary"><i class="fa fa-sync"></i> Update Contact Information</button>
 
