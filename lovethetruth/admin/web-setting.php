@@ -148,9 +148,9 @@ include "nav.php";
                                 <div class="card-body">
                                     <form enctype="multipart/form-data" method="post">
                                         <label for="web_logo_black">Black Website Logo</label>
-                                        <input type="file" name="web_logo_black" class="form-control">
+                                        <input type="file" name="web_logo_white" class="form-control">
                                         <br>
-                                        <button type="submit" name="wlb" class="btn btn-primary"> Change</button>
+                                        <button type="submit" name="wlw" class="btn btn-primary"> Change</button>
                                     </form>
                                 </div><!-- card-body -->
                             </div><!-- card -->
@@ -165,7 +165,7 @@ include "nav.php";
                                         <label for="web_logo_color">Color Website Logo</label>
                                         <input type="file" name="web_logo_color" class="form-control">
                                         <br>
-                                        <button type="submit" name="cwl" class="btn btn-primary"> Change</button>
+                                        <button type="submit" name="wlc" class="btn btn-primary"> Change</button>
                                     </form>
                                 </div><!-- card-body -->
                             </div><!-- card -->

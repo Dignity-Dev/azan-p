@@ -20,9 +20,9 @@ if (isset($_POST['hb'])) {}
 
 if (isset($_POST['wi'])) {}
 
-if (isset($_POST['wlb'])) {}
+if (isset($_POST['wlw'])) {}
 
-if (isset($_POST['cwl'])) {}
+if (isset($_POST['wlc'])) {}
 
 if (isset($_POST['ap'])) {}
 
