@@ -1,7 +1,7 @@
 
 <?php include("include/header.php"); ?>
 
-<title> Homepage – <?php echo $web_row['webname']; ?> <?php echo $web_row['web_slug']; ?></title>
+<title> Homepage – <?php echo $web_row['webname']; ?></title>
 <meta name="description" content="">
 <meta name="keywords" content="">
 </head>

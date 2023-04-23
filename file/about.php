@@ -4,7 +4,7 @@
         <div class="row align-items-center">
             <div class="col-lg-6">
                 <div class="about-content">
-                    <h3><strong><?php echo $web_row['webname']; ?></strong> <?php echo $web_row['web_slug']; ?></h3>
+                    <h3><strong><?php echo $web_row['webname']; ?></strong> </h3>
                     <h2><?php echo $web_row['side_head']; ?></h2>
                     <?php echo $web_row['side_text']; ?>
                     <div class="about-content__bottom d-flex align-items-center flex-wrap flex-sm-nowrap">
