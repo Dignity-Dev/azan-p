@@ -17,24 +17,7 @@ mysqli_query($con, "UPDATE message SET m_status = '0' WHERE message_id = '$get_i
                     <p class="az-dashboard-text"><?php echo $res['m_title']; ?></p>
                 </div>
                 <div class="az-content-header-right">
-                    <div class="media">
-                        <div class="media-body">
-                            <label>Total Articles</label>
-                            <h6>Oct 10, 2018</h6>
-                        </div><!-- media-body -->
-                    </div><!-- media -->
-                    <div class="media">
-                        <div class="media-body">
-                            <label>All Services</label>
-                            <h6>Oct 23, 2018</h6>
-                        </div><!-- media-body -->
-                    </div><!-- media -->
-                    <div class="media">
-                        <div class="media-body">
-                            <label>All Inbox</label>
-                            <h6>All Categories</h6>
-                        </div><!-- media-body -->
-                    </div><!-- media -->
+                    
                     <a href="article.php" class="btn btn-purple"><i class="fa fa-plus"></i> Create New Article</a>
                 </div>
             </div><!-- az-dashboard-one-title -->
