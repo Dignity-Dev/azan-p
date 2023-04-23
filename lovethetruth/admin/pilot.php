@@ -17,9 +17,23 @@ if (isset($_POST['about'])) {
 }
 
 if (isset($_POST['hb'])) {}
+
 if (isset($_POST['wi'])) {}
+
 if (isset($_POST['wlb'])) {}
+
 if (isset($_POST['cwl'])) {}
+
 if (isset($_POST['ap'])) {}
 
+if (isset($_POST['contact'])) {
+    $web_email = $_POST['web_email'];
+    $web_phone_1 = $_POST['web_phone_1'];
+    $web_phone_2 = $_POST['web_phone_2'];
+    $office_address = $_POST['office_address'];
+    $facebook = $_POST['facebook'];
+    $twitter = $_POST['twitter'];
+    $instagram = $_POST['instagram'];
+    $whatsapp = $_POST['whatsapp'];
+}
 ?>
