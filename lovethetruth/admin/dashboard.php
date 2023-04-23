@@ -12,8 +12,8 @@ include "nav.php";
                     <p class="az-dashboard-text">Your web dashboard hit up.</p>
                 </div>
                 <div class="az-content-header-right">
-                    
-                    <a href="article.php" class="btn btn-purple"><i class="fa fa-plus"></i> Create New Article</a>
+
+                    <a href="article.php" class="btn btn-purple"><i class="fa fa-plus"></i> Question and Answer (Q&A)</a>
                 </div>
             </div><!-- az-dashboard-one-title -->
             <hr>
@@ -23,8 +23,8 @@ include "nav.php";
                     <div class="card">
                         <div class="card-header">
                             <div>
-                                <h6 class="card-title">Create New Article</h6>
-                                <p class="card-text">Article are know as your publivcations, let people know more about what the program entails.</p>
+                                <h6 class="card-title">Create New QA</h6>
+                                <p class="card-text">Question and Answer design to make all easy and self understanding.</p>
                             </div>
 
                         </div><!-- card-header -->
@@ -36,44 +36,32 @@ include "nav.php";
                                 $title = $_POST['title'];
                                 $description = $_POST['description'];
                                 $slug = preg_replace('#[ -]+#', '-', trim($title));
-                                $date = date("Y-m-d");
 
                                 // Image Upload Code
                                 $fileInfo = PATHINFO($_FILES["act_img"]["name"]);
-                                if ($fileInfo['extension'] == "png" or $fileInfo['extension'] == "jpg" or $fileInfo['extension'] == "jpeg" or $fileInfo['extension'] == "PNG" or $fileInfo['extension'] == "JPG" or $fileInfo['extension'] == "JPEG") {
 
-                                    $filename = $_FILES["act_img"]["name"];
-                                    $tempname = $_FILES["act_img"]["tmp_name"];
-
-                                    $newFileName = $fileInfo['filename'] . "-" . time() . "." . $fileInfo['extension'];
-                                    // Folder Location
-                                    $folder = "../../images/activity/" . $newFileName;
-                                    // Now let's move the uploaded file into the folder: ebook
-                                    move_uploaded_file($tempname, $folder);
-                                    // Image Upload Code End
-                                    $send = mysqli_query($con, "INSERT INTO `article`(`article_title`, `article_date`, `article_slug`, `article_image`, `article_content`) VALUES ('$title','$date','$slug','$newFileName','$description')");
-                                    if ($send) {
-                                        $_SESSION['title'] = "Created Successfully";
-                                        $_SESSION['message'] = "An article was successfully uploaded";
-                                        $_SESSION['icon'] = "success";
-                                        $_SESSION['location'] = "article.php";
-                                    } else {
-                                        $_SESSION['title'] = "Not Save";
-                                        $_SESSION['message'] = "something went wrong, check your input and try again";
-                                        $_SESSION['icon'] = "error";
-                                        $_SESSION['location'] = "article.php";
-                                    }
+                                $send = mysqli_query($con, "INSERT INTO `qa`(`qa_title`, `qa_contect`, `qa_slug`) VALUES ('$title','$description','$slug')");
+                                if ($send) {
+                                    $_SESSION['title'] = "Created Successfully";
+                                    $_SESSION['message'] = "Q&A successfully Created";
+                                    $_SESSION['icon'] = "success";
+                                    $_SESSION['location'] = "dashboard.php";
+                                } else {
+                                    $_SESSION['title'] = "Not Save";
+                                    $_SESSION['message'] = "something went wrong, check your input and try again";
+                                    $_SESSION['icon'] = "error";
+                                    $_SESSION['location'] = "dashboard.php";
                                 }
                             }
+
                             ?>
                             <!-- SERVER CODE END -->
                             <form method="post" class="form-group" enctype="multipart/form-data">
-                                <label for="title">Title</label>
+                                <label for="title">Question</label>
                                 <textarea name="title" class="form-control" required></textarea>
-                                <label for="title">Contents</label>
+                                <label for="title">Answer</label>
                                 <textarea name="description" class="form-control" required id="editor"></textarea>
-                                <label for="thumbnail">Article Image</label>
-                                <input type="file" name="act_img" class="form-control" required>
+                              
                                 <br>
                                 <button type="submit" name="create" class="btn btn-check btn-primary"><i class="fa fa-plus"></i> Create</button>
                             </form>
@@ -86,8 +74,8 @@ include "nav.php";
                     <div class="card">
                         <div class="card-header">
                             <div>
-                                <h6 class="card-title">All Articles</h6>
-                                <p class="card-text">Manage All Articles, Update and delete.</p>
+                                <h6 class="card-title">All Q&A</h6>
+                                <p class="card-text">Manage All Q&A, Update and delete.</p>
                             </div>
 
                         </div><!-- card-header -->
@@ -97,22 +85,22 @@ include "nav.php";
                                     <thead>
                                         <tr>
                                             <th>S/N</th>
-                                            <th>Title</th>
+                                            <th>Question</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <?php
                                         $counter = 1;
-                                        $fetch = mysqli_query($con, "SELECT * FROM article");
+                                        $fetch = mysqli_query($con, "SELECT * FROM qa");
                                         while ($act = mysqli_fetch_array($fetch)) {
                                         ?>
                                             <tr>
                                                 <td><?php echo $counter++ . '.'; ?></td>
-                                                <td><?php echo $act['article_title']; ?></td>
+                                                <td><?php echo $act['qa_title']; ?></td>
                                                 <td>
-                                                    <a href="update-article.php?article=<?php echo $act['article_id']; ?>" class="text-primary" title="Update Me"> <i class="fa fa-edit"> </i> </a> |
-                                                    <a href="delete-article.php?article=<?php echo $act['article_id']; ?>" class="text-danger" title="delete Me"> <i class="fa fa-trash"> </i> </a>
+                                                    <a href="update-qa.php?qa=<?php echo $act['qa_id']; ?>" class="text-primary" title="Update Me"> <i class="fa fa-edit"> </i> </a> |
+                                                    <a href="delete-qa.php?qa=<?php echo $act['qa_id']; ?>" class="text-danger" title="delete Me"> <i class="fa fa-trash"> </i> </a>
                                                 </td>
                                             </tr>
                                         <?php } ?>
