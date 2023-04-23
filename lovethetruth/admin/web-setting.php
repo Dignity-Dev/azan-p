@@ -1,6 +1,7 @@
 <?php
 include "header.php";
 include "nav.php";
+include "pilot.php";
 ?>
 <!-- translator -->
 
@@ -195,48 +196,51 @@ include "nav.php";
                                     <p>Contact Information</p>
                                 </div><!-- card-header -->
                                 <div class="card-body">
-                                    <label for="web_email">Website Email</label>
-                                    <input type="text" name="web_email" class="form-control" value="<?php echo $web_row['web_email'] ?>" required>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <label for="web_phone_1">Phone No.</label>
-                                            <input type="text" name="web_phone_1" class="form-control" value="<?php echo $web_row['web_phone_1'] ?>">
+                                    <form method="post">
+                                        <label for="web_email">Website Email</label>
+                                        <input type="text" name="web_email" class="form-control" value="<?php echo $web_row['web_email'] ?>" required>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label for="web_phone_1">Phone No.</label>
+                                                <input type="text" name="web_phone_1" class="form-control" value="<?php echo $web_row['web_phone_1'] ?>">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="web_phone_2">Tel. Number</label>
+                                                <input type="text" name="web_phone_2" class="form-control" value="<?php echo $web_row['web_phone_2'] ?>">
+                                            </div>
                                         </div>
-                                        <div class="col-md-6">
-                                            <label for="web_phone_2">Tel. Number</label>
-                                            <input type="text" name="web_phone_2" class="form-control" value="<?php echo $web_row['web_phone_2'] ?>">
-                                        </div>
-                                    </div>
 
 
-                                    <label for="office_address">Office Address</label>
-                                    <input type="text" name="office_address" class="form-control" value="<?php echo $web_row['office_address'] ?>">
-                                    <br>
-                                    <p class="border-bottom"><b>Social Media Handles</b></p>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <label for="facebook">Facebook</label>
-                                            <input type="text" name="facebook" class="form-control" value="<?php echo $web_row['facebook'] ?>">
+                                        <label for="office_address">Office Address</label>
+                                        <input type="text" name="office_address" class="form-control" value="<?php echo $web_row['office_address'] ?>">
+                                        <br>
+                                        <p class="border-bottom"><b>Social Media Handles</b></p>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label for="facebook">Facebook</label>
+                                                <input type="text" name="facebook" class="form-control" value="<?php echo $web_row['facebook'] ?>">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="twitter">Twitter</label>
+                                                <input type="text" name="twitter" class="form-control" value="<?php echo $web_row['twitter'] ?>">
+                                            </div>
                                         </div>
-                                        <div class="col-md-6">
-                                            <label for="twitter">Twitter</label>
-                                            <input type="text" name="twitter" class="form-control" value="<?php echo $web_row['twitter'] ?>">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label for="instagram">Instagram</label>
+                                                <input type="text" name="instagram" class="form-control" value="<?php echo $web_row['instagram'] ?>">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="whatsapp">WhatsApp</label>
+                                                <input type="text" name="whatsapp" class="form-control" value="<?php echo $web_row['whatsapp'] ?>">
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <label for="instagram">Instagram</label>
-                                            <input type="text" name="instagram" class="form-control" value="<?php echo $web_row['instagram'] ?>">
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label for="whatsapp">WhatsApp</label>
-                                            <input type="text" name="whatsapp" class="form-control" value="<?php echo $web_row['whatsapp'] ?>">
-                                        </div>
-                                    </div>
 
 
-                                    <br>
-                                    <button type="submit" name="contact" class="btn btn-primary"><i class="fa fa-sync"></i> Update Contact Information</button>
+                                        <br>
+                                        <button type="submit" name="contact" class="btn btn-primary"><i class="fa fa-sync"></i> Update Contact Information</button>
+
+                                    </form>
 
                                 </div>
                             </div>
