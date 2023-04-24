@@ -1,4 +1,3 @@
-
 <?php include("include/header.php"); ?>
 
 <title> Homepage – <?php echo $web_row['webname']; ?></title>
@@ -55,12 +54,12 @@
                                         <figure class="activity wow fadeInLeft">
                                             <div class="activity__thumb">
                                                 <a href="this-activity.php?activity=<?php echo $a_row['a_slug'] ?>">
-                                                    <img src="<?php echo 'images/activity/' . $a_row['a_thumbnail'] ?>" alt="<?php echo $web_row['webname'] ?> - <?php echo $a_row['a_title'] ?> image">
+                                                    <img src="<?php echo 'images/activity/' . $a_row['a_thumbnail'] ?>" alt="<?php echo $web_row['webname'] ?> - <?php echo $a_row['a_title'] ?> image" style="max-height:300px; min-height:270px;">
                                                 </a>
                                             </div>
                                             <figcaption class="activity__content text-center">
                                                 <h3><a href="this-activity.php?activity=<?php echo $a_row['a_slug'] ?>"><?php echo $a_row['a_title'] ?></a></h3>
-                                                <?php echo $a_row['a_description'] ?>
+                                                <?php echo substr_replace($a_row['a_content'], "...", 100);  ?>
                                             </figcaption>
                                         </figure>
                                     </div><!-- //Single Activity -->
@@ -108,8 +107,8 @@
                                                 <p>Posted on - <?php echo date("l d F, Y", strtotime($b_row['article_date']))  ?></p>
                                             </div>
                                             <h4 class="blog-title"><a href="article-details.php?article=<?php echo $b_row['article_slug'] ?>"> <?php echo $b_row['article_title'] ?> </a></h4>
-                                            <?php echo $b_row['article_content'] ?>
-                                            <a href="article-details.php?article=<?php echo $b_row['article_slug'] ?>" class="cr-readmore">Read</a>
+                                            <?php echo substr_replace($b_row['article_content'], "...", 200); ?>
+                                            <br><a href="article-details.php?article=<?php echo $b_row['article_slug'] ?>" class="cr-readmore">Read More</a>
                                         </div>
                                     </article>
                                 </div><!-- //Start Single Blog -->

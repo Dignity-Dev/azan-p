@@ -78,7 +78,7 @@ $res = mysqli_fetch_array($fetch);
                                     <h4 class="widget-title">All Activities</h4>
                                     <ul>
                                         <?php
-                                        $b = mysqli_query($con, "SELECT * FROM `activities` WHERE a_status='1' LIMIT 3 ");
+                                        $b = mysqli_query($con, "SELECT * FROM `activities` WHERE a_status='1'");
                                         while ($a_row = mysqli_fetch_array($b)) {
                                         ?>
                                             <li><a href="this-activity.php?activity=<?php echo $a_row['a_slug'] ?>"><?php echo $a_row['a_title']; ?></a></li>
