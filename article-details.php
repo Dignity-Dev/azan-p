@@ -52,6 +52,7 @@ $res = mysqli_fetch_array($fetch);
                                 </div>
                                 <p>Posted on - <?php echo date("l d F, Y", strtotime($res['article_date']))  ?></p>
                                 <h2 class="activity-details__title" title="<?php echo $res['article_title']; ?>"><?php echo $res['article_title']; ?></h2>
+
                                 <div class="activity-details__content">
                                     <?php echo $res['article_content']; ?>
 
