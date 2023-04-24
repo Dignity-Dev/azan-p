@@ -1,4 +1,14 @@
-<?php include("config.php"); ?>
+<?php include("config.php");
+if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')
+    $url = "https://";
+else
+    $url = "http://";
+// Append the host(domain name, ip) to the URL.   
+$url .= $_SERVER['HTTP_HOST'];
+
+// Append the requested resource location to the URL   
+$url .= $_SERVER['REQUEST_URI'];
+?>
 
 <!doctype html>
 <html class="no-js" lang="zxx">
@@ -27,7 +37,7 @@
     <link rel="stylesheet" href="css/custom.css">
     <style>
         .bg-image--1 {
-            background-image: url(<?php echo 'images/bg/'.$web_row['hero_banner']; ?>);
+            background-image: url(<?php echo 'images/bg/' . $web_row['hero_banner']; ?>);
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center center;

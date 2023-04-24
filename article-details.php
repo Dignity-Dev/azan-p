@@ -2,6 +2,8 @@
 $get_id = $_GET['article'];
 $fetch = mysqli_query($con, "SELECT * FROM article WHERE article_slug='$get_id'");
 $res = mysqli_fetch_array($fetch);
+
+
 ?>
 
 <title> <?php echo $res['article_title']; ?> – <?php echo $web_row['webname']; ?></title>
