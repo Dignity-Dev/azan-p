@@ -3,10 +3,10 @@
     <div class="container">
         <div class="header header--style-1">
             <div class="logo image--logo hidden-md hidden-sm hidden-xs">
-                <a href="index-2.html"><img src="<?php echo "images/" . $web_row['web_logo_white']; ?>" alt="<?php echo $web_row['webname']; ?> logo"></a>
+                <a href="index.php"><img src="<?php echo "images/" . $web_row['web_logo_white']; ?>" alt="<?php echo $web_row['webname']; ?> logo"></a>
             </div>
             <div class="header__right">
-                
+
                 <div class="header__right__top d-flex justify-content-end align-items-center flex-wrap flex-sm-nowrap">
                     <ul class="header__right__times d-flex justify-content-end">
                         <li>
@@ -28,6 +28,7 @@
                             <li><a href="index.php">HOMEPAGE</a></li>
                             <li><a href="article.php">ARTICLE</a></li>
                             <li><a href="activities.php">OUR ACTIVITIES</a></li>
+                            <li><a href="QA.php">QUESTION & ANSWER</a></li>
                             <li><a href="about-us.php">ABOUT</a></li>
                             <li><a href="contact.php">Contact</a></li>
                         </ul>

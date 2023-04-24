@@ -30,4 +30,4 @@
             </div>
         </section><!-- //Breadcrumb area -->
 
-    
+    <?php include "include/footer.php";?>

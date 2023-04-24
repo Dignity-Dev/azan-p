@@ -73,21 +73,7 @@
                             </div><!-- //Contact Sidebar -->
                             <!-- Contact Map -->
                             <div class="col-lg-8">
-                                <div class="ct__map">
-                                    <iframe class="contact-map" src="">
-                                    </iframe>
-                                </div>
-                            </div><!-- //Contact Map -->
-                        </div>
-                    </div>
-                </aside><!-- //Contact Page Details -->
 
-                <!-- Contact Page Form -->
-                <aside class="contact-page-form pt--100">
-                    <div class="container">
-                        <div class="row">
-                            <!-- Contact Form -->
-                            <div class="col-lg-8">
                                 <div class="contact__form">
                                     <div class="small-title">
                                         <h4>Send us a message</h4>
@@ -95,26 +81,26 @@
                                     </div>
                                     <div class="comment-box">
                                         <!-- server info -->
-                                        <?php 
+                                        <?php
                                         if (isset($_POST['send'])) {
                                             $con_name = $_POST['con_name'];
                                             $con_email = $_POST['con_email'];
                                             $con_phone = $_POST['con_phone'];
                                             $con_subject = $_POST['con_subject'];
                                             $con_message = $_POST['con_message'];
-                                           $date = date("Y m d H:i:s");
-                                           $status = "1";
+                                            $date = date("Y/m/d H:i:s");
+                                            $status = "1";
 
-                                           $q = mysqli_query($con, "INSERT INTO `message`(`m_name`, `m_email`, `m_phone`, `m_title`, `m_message`, `m_date`, `m_status`) VALUES ('$con_name','$con_email','$con_phone','$con_subject','$con_message','$date','$status')");
-                                           if ($q) {
-                                            echo "<script>window.alert('Sent successfully');window.location='contact.php';</script>";
-                                           }else{
+                                            $q = mysqli_query($con, "INSERT INTO `message`(`m_name`, `m_email`, `m_phone`, `m_title`, `m_message`, `m_date`, `m_status`) VALUES ('$con_name','$con_email','$con_phone','$con_subject','$con_message','$date','$status')");
+                                            if ($q) {
+                                                echo "<script>window.alert('Sent successfully');window.location='contact.php';</script>";
+                                            } else {
                                                 echo "<script>window.alert('Something went wrong');window.location='contact.php';</script>";
-                                           }
+                                            }
                                         }
-                                        
+
                                         ?>
-                                        <form id="contact-form" method="post"  autocomplete="off">
+                                        <form id="contact-form" method="post" autocomplete="off">
                                             <div class="single-input">
                                                 <input type="text" name="con_name" placeholder="Enter your name">
                                             </div>
@@ -131,19 +117,18 @@
                                                 <textarea cols="3" name="con_message" rows="3" placeholder="Write your message here"></textarea>
                                             </div>
                                             <div class="single-input">
-                                                <button type="submit" name="send"  class="cr-btn cr-btn--sm cr-btn--transparent cr-btn--icon"><span>send</span></button>
+                                                <button type="submit" name="send" class="cr-btn cr-btn--sm cr-btn--transparent cr-btn--icon"><span>send</span></button>
                                             </div>
                                         </form>
                                         <p class="form-messege mt-3 mb-0"></p>
                                     </div>
                                 </div>
-                            </div><!-- //Contact Form -->
-                            <div class="col-lg-4">
-                                <img src="images/others-jpg/contact-image.jpg" alt="contact image">
-                            </div>
+
+                            </div><!-- //Contact Map -->
                         </div>
                     </div>
-                </aside><!-- //Contact Page Form -->
+                </aside><!-- //Contact Page Details -->
+
 
             </div><!-- //Contact Page Area -->
 

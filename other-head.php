@@ -36,6 +36,7 @@
                                 <li><a href="index.php">HOMEPAGE</a></li>
                                 <li><a href="article.php">ARTICLE</a></li>
                                 <li><a href="activities.php">OUR ACTIVITIES</a></li>
+                                <li><a href="QA.php">QUESTION & ANSWER</a></li>
                                 <li><a href="about-us.php">ABOUT</a></li>
                                 <li><a href="contact.php">Contact</a></li>
                             </ul>

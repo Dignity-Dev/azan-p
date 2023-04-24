@@ -83,42 +83,42 @@
                             <div class="section-title text-center">
                                 <h4>Our “Activities”</h4>
                                 <h2>Here is our Activities</h2>
-                               
+
                             </div>
                         </div>
                     </div>
                     <div class="activity-slider-active slider-arrow--style2">
                         <?php
-                            $a = mysqli_query($con, "SELECT * FROM `activities` WHERE a_status='1'");
-                            if (mysqli_num_rows($a) < 1) {
+                        $a = mysqli_query($con, "SELECT * FROM `activities` WHERE a_status='1'");
+                        if (mysqli_num_rows($a) < 1) {
 
+                        ?>
+                            <div class="alert alert-info">No Activities yet</div>
+                            <?php } else {
+                            $b = mysqli_query($con, "SELECT * FROM `activities` WHERE a_status='1' LIMIT 3 ");
+                            while ($a_row = mysqli_fetch_array($b)) {
                             ?>
-                                <div class="alert alert-info">No Activities yet</div>
-                                <?php } else {
-                                $b = mysqli_query($con, "SELECT * FROM `activities` WHERE a_status='1' ");
-                                while ($a_row = mysqli_fetch_array($b)) {
-                                ?>
-                        <!-- Single Activity -->
-                        <div class="activity-wrap">
-                            <figure class="activity">
-                                <div class="activity__thumb">
-                                    <a href="this-activity.php?activity=<?php echo $a_row['a_slug'] ?>">
-                                        <img src="<?php echo 'images/activity/' . $a_row['a_thumbnail'] ?>" alt="<?php echo $web_row['webname'] ?> - <?php echo $a_row['a_title'] ?> image">
-                                    </a>
-                                </div>
-                                <figcaption class="activity__content text-center">
-                                    <h3><a href="this-activity.php?activity=<?php echo $a_row['a_slug'] ?>"><?php echo $a_row['a_title'] ?></a></h3>
-                                    <?php echo $a_row['a_description'] ?>
-
-                                </figcaption>
-                            </figure>
-                        </div><!-- //Single Activity -->
-                        <?php }}?>
+                                <!-- Single Activity -->
+                                <div class="activity-wrap">
+                                    <figure class="activity wow fadeInLeft">
+                                        <div class="activity__thumb">
+                                            <a href="this-activity.php?activity=<?php echo $a_row['a_slug'] ?>">
+                                                <img src="<?php echo 'images/activity/' . $a_row['a_thumbnail'] ?>" alt="<?php echo $web_row['webname'] ?> - <?php echo $a_row['a_title'] ?> image" style="max-height:300px; min-height:270px;">
+                                            </a>
+                                        </div>
+                                        <figcaption class="activity__content text-center">
+                                            <h3><a href="this-activity.php?activity=<?php echo $a_row['a_slug'] ?>"><?php echo $a_row['a_title'] ?></a></h3>
+                                            <?php echo substr_replace($a_row['a_content'], "...", 100);  ?>
+                                        </figcaption>
+                                    </figure>
+                                </div><!-- //Single Activity -->
+                        <?php }
+                        } ?>
                     </div>
                 </div>
             </section><!-- //Activities area -->
 
-    
+
         </main><!-- //Page Conent -->
 
 

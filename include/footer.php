@@ -11,7 +11,7 @@
                         <!-- Single Widgets -->
                         <div class="single-widget widget--details">
                             <div class="logo">
-                                <a href="index-2.html">
+                                <a href="index.php">
                                     <img src="<?php echo "images/" . $web_row['web_logo_white']; ?>" alt="<?php echo $web_row['webname']; ?> logo">
                                 </a>
                             </div>
@@ -28,11 +28,14 @@
 
                         <!-- Single Widgets -->
                         <div class="single-widget widget--support">
-                            <h4 class="widget-title">Support</h4>
+                            <h4 class="widget-title">Quick Link</h4>
                             <ul>
-                                <li><a href="about-us.php">About us</a></li>
-                                <li><a href="blog.php">Blog Center</a></li>
+                                <li><a href="index.php">HomePage</a></li>
+                                <li><a href="article.php">Article Center</a></li>
                                 <li><a href="contact.php">Contact</a></li>
+                                <li><a href="activities.php">Our Activities</a></li>
+                                <li><a href="QA.php">Question & Answer</a></li>
+                                
                             </ul>
                         </div><!-- //Single Widgets -->
 
@@ -76,13 +79,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-6">
-                    <p>Copyright &copy; <?php echo $web_row['webname']; ?>, All rights Reserved, <?php date("Y");?> Developed by <a href="http://dignitytechng.com" target="_blank">Dignity Technology</a> </p>
+                    <p>Copyright &copy; <?php echo $web_row['webname']; ?>, All rights Reserved, <?php date("Y"); ?> Developed by <a href="http://dignitytechng.com" target="_blank">Dignity Technology</a> </p>
                 </div>
-                <!-- <div class="col-lg-6 col-md-6">
-                    <div class="footer__payment-icons text-right">
-                        <img src="images/icons/payment-method.png" alt="payment method">
-                    </div>
-                </div> -->
+             
             </div>
         </div>
     </div><!-- //Footer Copyright -->

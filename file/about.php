@@ -21,11 +21,32 @@
                 </div>
             </div>
             <div class="col-lg-6">
-                <div class="about-images clearfix">
-                    <img class="wow fadeInUp" src="images/about/large-1.jpg" alt="about image">
-                    <img class="wow fadeInUp" src="images/about/small-1.jpg" alt="smalal image">
-                    <img class="wow fadeInUp" data-wow-delay="0.1s" src="images/about/small-2.jpg" alt="smalal image">
+                <h1><strong>Question and Answers</strong></h1>
+                <h3>Explore your mind</h3>
+
+                <div id="accordion">
+                    <?php
+                    $counter = 1;
+                    $fetch = mysqli_query($con, "SELECT * FROM qa LIMIT 4");
+                    while ($res = mysqli_fetch_array($fetch)) {
+                    ?>
+                        <div class="card">
+                            <div class="card-header">
+                                <a class="btn" data-bs-toggle="collapse" href="#collapseOne">
+                                    <?php echo $res['qa_title']; ?>
+                                </a>
+                            </div>
+                            <div id="collapseOne" class="collapse" data-bs-parent="#accordion">
+                                <div class="card-body">
+                                    <?php echo $res['qa_contect']; ?>
+                                </div>
+                            </div>
+                        </div>
+                    <?php } ?>
+
                 </div>
+                <br>
+                <a href="QA.php" class="cr-btn cr-btn--sm cr-btn--transparent cr-btn--dark"> All Question and Answers</a>
             </div>
         </div>
     </div>
