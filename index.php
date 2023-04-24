@@ -100,7 +100,7 @@
                                     <article class="blog wow fadeInUp">
                                         <div class="blog__thumb">
                                             <a href="article-details.php?article=<?php echo $b_row['article_slug'] ?>">
-                                                <img src="<?php echo 'images/activity/' . $b_row['article_slug'] ?>" alt="<?php echo $b_row['article_title'] ?>">
+                                                <img src="<?php echo 'images/activity/' . $b_row['article_image'] ?>" alt="<?php echo $b_row['article_title'] ?>">
                                             </a>
                                         </div>
                                         <div class="blog__content">
