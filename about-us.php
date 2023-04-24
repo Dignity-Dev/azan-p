@@ -1,8 +1,8 @@
 <?php include("include/header.php"); ?>
 
 <title> About Us – <?php echo $web_row['webname']; ?> </title>
-<meta name="description" content="">
-<meta name="keywords" content="">
+<meta name="description" content="About Us – <?php echo $web_row['webname']; ?>  <?php echo $web_row['vision']; ?>">
+<meta name="keywords" content="About Us,<?php echo $web_row['webname']; ?>, ">
 </head>
 
 <body>
@@ -37,6 +37,7 @@
             include("file/about.php");
             ?>
 
+            <?php include 'translator.php'; ?>
 
             <!-- About Details Area -->
             <div class="cr-section about-details-area ptb--120 bg--pattern">

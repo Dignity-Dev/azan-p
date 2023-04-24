@@ -1,8 +1,8 @@
 <?php include("include/header.php"); ?>
 
 <title> Homepage – <?php echo $web_row['webname']; ?></title>
-<meta name="description" content="">
-<meta name="keywords" content="">
+<meta name="description" content="Homepage – <?php echo $web_row['webname']; ?>">
+<meta name="keywords" content="Homepage, truth, preech, praise, islam, <?php echo $web_row['webname']; ?>">
 </head>
 
 <body>
@@ -24,6 +24,7 @@
             include("file/about.php");
             include("file/pillar.php");
             ?>
+            <?php include 'translator.php'; ?>
 
             <!-- Activities area -->
             <section class="cr-section activities-area half--bg bg-image--1 pt--90 pb--100">

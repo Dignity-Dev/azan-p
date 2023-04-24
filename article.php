@@ -1,8 +1,8 @@
 <?php include("include/header.php"); ?>
 
 <title> Articles – <?php echo $web_row['webname']; ?></title>
-<meta name="description" content="">
-<meta name="keywords" content="">
+<meta name="description" content=" Articles – <?php echo $web_row['webname']; ?>">
+<meta name="keywords" content=" Articles, Knowledge, <?php echo $web_row['webname']; ?>">
 </head>
 
 <body>
@@ -30,6 +30,7 @@
             </div>
         </section><!-- //Breadcrumb area -->
 
+        <?php include 'translator.php'; ?>
 
 
 

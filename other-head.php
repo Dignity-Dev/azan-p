@@ -24,6 +24,7 @@
                 </div>
             </div>
         </div><!-- //Header Top Area -->
+        <?php include 'translator.php'; ?>
 
         <!-- Header Bottom Area -->
         <div class="header__bottom bg--theme">

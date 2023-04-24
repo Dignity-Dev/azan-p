@@ -33,6 +33,7 @@ $res = mysqli_fetch_array($fetch);
                 </div>
             </div>
         </section><!-- //Breadcrumb area -->
+        <?php include 'translator.php'; ?>
 
         <!-- Page Conent -->
         <main class="page-content">
